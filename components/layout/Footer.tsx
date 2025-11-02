@@ -1,10 +1,10 @@
 import { FaFacebookF, FaLinkedin } from "react-icons/fa";
-import ContainerBodyLayout from "./ContainerBodyLayout";
 import Link from "next/link";
 import { FaXTwitter } from "react-icons/fa6";
+import ContainerBodyLayout from "./ContainerBodyLayout";
 
 export default function Footer() {
-  return <div className="bg-primary py-5">
+  return <footer className="bg-primary py-5">
     <ContainerBodyLayout>
       <div className="flex flex-col md:flex-row justify-between items-center gap-3">
         <div className="md:w-1/2">
@@ -31,5 +31,5 @@ export default function Footer() {
         </div>
       </div>
     </ContainerBodyLayout>
-  </div>
+  </footer>
 }
