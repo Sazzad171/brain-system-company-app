@@ -12,6 +12,7 @@ import dynamic from 'next/dynamic'
 const Slider: any = dynamic(() => import('react-slick'), { ssr: false })
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import CTA from "@/components/common/sections/cta";
 
 const logos = [
   '/home/tech-stack/1.png',
@@ -418,18 +419,7 @@ export default function Home() {
       </section>
 
       {/* cta */}
-      <section className="py-10">
-        <ContainerBodyLayout maxWidth="md">
-          <div className="bg-primary rounded-2xl py-16 px-4 text-center">
-            <h1 className="text-4xl font-bold text-white">Have Any Project In Mind?</h1>
-            <div className="mt-8">
-              <Link href="/conatct" className="bg-white text-primary font-semibold py-3 px-6 rounded-3xl inline-block">
-                Say Hello!
-              </Link>
-            </div>
-          </div>
-        </ContainerBodyLayout>
-      </section>
+      <CTA />
     </>
   );
 }

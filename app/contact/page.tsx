@@ -11,13 +11,14 @@ export default function Footer() {
         <div className="rounded-2xl shadow-lg border border-gray-100 p-4">
           <div className="flex flex-col md:flex-row items-center gap-4">
             <div className="w-full md:w-4/12">
-              <div className="bg-primary rounded-2xl p-4 md:p-10">
-                <div className="flex flex-col justify-between md:min-h-[500px]">
-                  <div className="mb-4">
+              <div className="bg-primary rounded-2xl overflow-hidden">
+                <div className="relative flex flex-col justify-between md:min-h-[500px] bg-no-repeat bg-right-bottom bg-contain bg-[url('/contact/bg-1.webp')] p-4 md:p-10 bg-[length:300px_300px]">
+                  <div className="absolute top-0 left-0 w-full h-full bg-[#88c27385] z-0"></div>
+                  <div className="mb-4 z-[1]">
                     <h3 className="text-3xl text-white mb-2">Contact Information</h3>
                     <p className="text-lg text-white">We’ll create high-quality linkable content and build at least 40 high-authority.</p>
                   </div>
-                  <div>
+                  <div className="z-[1]">
                     <ul>
                       <li className="text-white flex gap-3 items-center mb-4">
                         <FaPhoneAlt /> 
@@ -37,7 +38,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="w-full md:w-8/12">
-              <form action="" className="p-6 lg:p-16">
+              <form action="" className="px-6 lg:px-16 py-2">
                 <TextField
                   label="Full Name"
                   type="text"

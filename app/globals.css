@@ -5,3 +5,9 @@
 body {
   @apply text-secondary;
 }
+
+@layer base {
+  p {
+    line-height: 2;
+  }
+}
