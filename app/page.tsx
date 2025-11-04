@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import CountUp from "react-countup";
-import { FaArrowCircleRight } from "react-icons/fa";
+import { FaArrowCircleRight, FaCheckCircle } from "react-icons/fa";
 import React from 'react'
 import dynamic from 'next/dynamic'
 
@@ -67,7 +67,7 @@ export default function Home() {
       <section className="relative min-h-screen overflow-hidden xl:-mt-[86px]">
         {/* bg video */}
         <iframe
-          className="absolute -top-10 -left-[50vw] min-w-[200vw] min-h-[200vh] object-cover pointer-events-none -z-0"
+          className="absolute -top-20 -left-[50vw] min-w-[200vw] min-h-[200vh] object-cover pointer-events-none -z-0"
           src="https://www.youtube.com/embed/Hgg7M3kSqyE?autoplay=1&mute=1&loop=1&playlist=Hgg7M3kSqyE&controls=0&showinfo=0&modestbranding=1&rel=0"
           title="YouTube background"
           frameBorder="0"
@@ -359,23 +359,137 @@ export default function Home() {
       {/* project sections */}
       <section className="py-10">
         <ContainerBodyLayout maxWidth="xl">
-          <h2 className="text-[38px] text-center font-medium mb-7"><span className="text-primary">Our AI Services</span> accelerating innovation & <br /> guaranteeing ROI</h2>
-          <div className="flex gap-4">
-            <div className="w-full md:w-6/12">
-              <div className="bg-primary min-h-screen flex items-center p-4 md:p-8">
-                <h2 className="text-6xl font-medium text-white">
+          <h2 className="text-[38px] text-center font-medium mb-8"><span className="text-primary">Our AI Services</span> accelerating innovation & <br /> guaranteeing ROI</h2>
+          <div className="flex flex-col md:flex-row gap-4 relative">
+            <div className="w-full md:w-6/12 md:sticky md:top-0 self-start">
+              <div className="bg-primary min-h-screen flex items-center p-4 md:p-8 rounded-3xl">
+                <div>
+                  <h2 className="text-6xl font-medium text-white mb-2">
                   Revolutionize Engineering with AI-First Transformation Services
-                </h2>
+                  </h2>
+                  <p className="text-white">
+                    From design to deployment, harness artificial intelligence to automate, innovate, and scale with precision. Integrating advanced analytics, automation, and machine learning to drive smarter decisions and sustainable growth.
+                  </p>
+                </div>
               </div>
             </div>
             <div className="w-full md:w-6/12">
-              <Image
-                src="/home/brain-clerk/1.png"
-                alt="Logo"
-                width={504}
-                height={533}
-                className="object-cover"
-              />
+              <div className="md:sticky md:top-0 bg-[#E8F0FE] rounded-3xl p-2">
+                <Image
+                  src="/home/projects/1.webp"
+                  alt="Logo"
+                  width={1024}
+                  height={683}
+                  className="object-cover rounded-3xl mb-4"
+                />
+                <h2 className="text-3xl font-semibold mb-3">Agro Rx</h2>
+                <h6 className="text-xl mb-4">Agro Rx is a comprehensive solution designed to support farmers in every aspect of farming.</h6>
+                <ul className="mb-4 space-y-2">
+                  <li className="flex gap-3 items-center">
+                    <FaCheckCircle className="text-primary" /> 
+                    Accepts input in both Bangla and English.
+                  </li>
+                  <li className="flex gap-3 items-center">
+                    <FaCheckCircle className="text-primary" /> 
+                    Farmers can speak or type their queries.
+                  </li>
+                  <li className="flex gap-3 items-center">
+                    <FaCheckCircle className="text-primary" /> 
+                    Provides instant help on crop diseases, pesticides, and farming techniques.
+                  </li>
+                  <li className="flex gap-3 items-center">
+                    <FaCheckCircle className="text-primary" /> 
+                    Farmers can send photos of affected plants for accurate diagnosis
+                  </li>
+                </ul>
+              </div>
+              <div className="md:sticky md:top-0 bg-[#E8F0FE] rounded-3xl p-2">
+                <Image
+                  src="/home/projects/2.jpg"
+                  alt="Logo"
+                  width={1024}
+                  height={683}
+                  className="object-cover rounded-3xl mb-4"
+                />
+                <h2 className="text-3xl font-semibold mb-3">Agro Rx</h2>
+                <h6 className="text-xl mb-4">Agro Rx is a comprehensive solution designed to support farmers in every aspect of farming.</h6>
+                <ul className="mb-4 space-y-2">
+                  <li className="flex gap-3 items-center">
+                    <FaCheckCircle className="text-primary" /> 
+                    Accepts input in both Bangla and English.
+                  </li>
+                  <li className="flex gap-3 items-center">
+                    <FaCheckCircle className="text-primary" /> 
+                    Farmers can speak or type their queries.
+                  </li>
+                  <li className="flex gap-3 items-center">
+                    <FaCheckCircle className="text-primary" /> 
+                    Provides instant help on crop diseases, pesticides, and farming techniques.
+                  </li>
+                  <li className="flex gap-3 items-center">
+                    <FaCheckCircle className="text-primary" /> 
+                    Farmers can send photos of affected plants for accurate diagnosis
+                  </li>
+                </ul>
+              </div>
+              <div className="md:sticky md:top-0 bg-[#E8F0FE] rounded-3xl p-2">
+                <Image
+                  src="/home/projects/3.webp"
+                  alt="Logo"
+                  width={1024}
+                  height={683}
+                  className="object-cover rounded-3xl mb-4"
+                />
+                <h2 className="text-3xl font-semibold mb-3">Agro Rx</h2>
+                <h6 className="text-xl mb-4">Agro Rx is a comprehensive solution designed to support farmers in every aspect of farming.</h6>
+                <ul className="mb-4 space-y-2">
+                  <li className="flex gap-3 items-center">
+                    <FaCheckCircle className="text-primary" /> 
+                    Accepts input in both Bangla and English.
+                  </li>
+                  <li className="flex gap-3 items-center">
+                    <FaCheckCircle className="text-primary" /> 
+                    Farmers can speak or type their queries.
+                  </li>
+                  <li className="flex gap-3 items-center">
+                    <FaCheckCircle className="text-primary" /> 
+                    Provides instant help on crop diseases, pesticides, and farming techniques.
+                  </li>
+                  <li className="flex gap-3 items-center">
+                    <FaCheckCircle className="text-primary" /> 
+                    Farmers can send photos of affected plants for accurate diagnosis
+                  </li>
+                </ul>
+              </div>
+              <div className="md:sticky md:top-0 bg-[#E8F0FE] rounded-3xl p-2">
+                <Image
+                  src="/home/projects/4.webp"
+                  alt="Logo"
+                  width={1024}
+                  height={683}
+                  className="object-cover rounded-3xl mb-4"
+                />
+                <h2 className="text-3xl font-semibold mb-3">Agro Rx</h2>
+                <h6 className="text-xl mb-4">Agro Rx is a comprehensive solution designed to support farmers in every aspect of farming.</h6>
+                <ul className="mb-4 space-y-2">
+                  <li className="flex gap-3 items-center">
+                    <FaCheckCircle className="text-primary" /> 
+                    Accepts input in both Bangla and English.
+                  </li>
+                  <li className="flex gap-3 items-center">
+                    <FaCheckCircle className="text-primary" /> 
+                    Farmers can speak or type their queries.
+                  </li>
+                  <li className="flex gap-3 items-center">
+                    <FaCheckCircle className="text-primary" /> 
+                    Provides instant help on crop diseases, pesticides, and farming techniques.
+                  </li>
+                  <li className="flex gap-3 items-center">
+                    <FaCheckCircle className="text-primary" /> 
+                    Farmers can send photos of affected plants for accurate diagnosis
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </ContainerBodyLayout>

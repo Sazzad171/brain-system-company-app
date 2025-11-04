@@ -11,7 +11,7 @@ import CountUp from "react-countup";
 import { FaChevronDown, FaDatabase, FaMap, FaTable } from "react-icons/fa";
 
 export default function AboutUs() {
-  const [expanded, setExpanded] = useState<string | false>(false);
+  const [expanded, setExpanded] = useState<string | false>("panel1");
 
   const handleChange = (panel: string) => (_event: React.SyntheticEvent, isExpanded: boolean) => {
     setExpanded(isExpanded ? panel : false);
@@ -141,7 +141,7 @@ export default function AboutUs() {
     </section>
 
     {/* mission vision */}
-    <section className="pt-6 pb-28 max-w-[100vw] overflow-hidden">
+    <section className="pt-6 lg:pt-10 pb-28 max-w-[100vw] overflow-hidden">
       <ContainerBodyLayout>
         <div className="flex flex-col md:flex-row items-center gap-4">
           <div className="w-full md:w-6/12">
@@ -180,7 +180,7 @@ export default function AboutUs() {
     </section>
 
     {/* team structure */}
-    <section className="pt-6 pb-28 max-w-[100vw] overflow-hidden">
+    <section className="pt-6 lg:pt-16 pb-28 max-w-[100vw] overflow-hidden">
       <ContainerBodyLayout>
         <div className="flex flex-col md:flex-row items-center gap-4">
           <div className="w-full md:w-6/12">
@@ -211,22 +211,133 @@ export default function AboutUs() {
                  to the ongoing advancement of new era.
               </p>
             </div>
-            <div>
-              <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+            <div className="space-y-3">
+              <Accordion
+                expanded={expanded === 'panel1'}
+                onChange={handleChange('panel1')}
+                className="!shadow-none"
+              >
                 <AccordionSummary
                   expandIcon={<FaChevronDown className="" />}
                   aria-controls="ac-content"
                   id="ac-header"
-                  className="bg-gray-200"
+                  className="!bg-gray-200 !text-lg !font-medium"
                 >
                   <h4>Data Team</h4>
                 </AccordionSummary>
-                <AccordionDetails>
-                  <p>Data Scientists</p>
+                <AccordionDetails className="!border !border-gray-200">
+                  <ul className="space-y-2 list-disc list-inside ml-4">
+                    <li>
+                      Data Scientists
+                    </li>
+                    <li>
+                      Data Engineers
+                    </li>
+                    <li>
+                      Machine Learning Engineers
+                    </li>
+                  </ul>
                 </AccordionDetails>
               </Accordion>
-
-      
+              <Accordion
+                expanded={expanded === 'panel2'}
+                onChange={handleChange('panel2')}
+                className="!shadow-none"
+              >
+                <AccordionSummary
+                  expandIcon={<FaChevronDown className="" />}
+                  aria-controls="ac-content"
+                  id="ac-header"
+                  className="!bg-gray-200 !text-lg !font-medium"
+                >
+                  <h4>Algorithm / Research Team</h4>
+                </AccordionSummary>
+                <AccordionDetails className="!border !border-gray-200">
+                  <ul className="space-y-2 list-disc list-inside ml-4">
+                    <li>
+                      Deep Learning Engineers
+                    </li>
+                    <li>
+                      Machine Learning Engineers/Researchers
+                    </li>
+                    <li>
+                      Computer Vision Researchers
+                    </li>
+                     <li>
+                      Natural Language Processing Researchers
+                    </li>
+                  </ul>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion
+                expanded={expanded === 'panel3'}
+                onChange={handleChange('panel3')}
+                className="!shadow-none"
+              >
+                <AccordionSummary
+                  expandIcon={<FaChevronDown className="" />}
+                  aria-controls="ac-content"
+                  id="ac-header"
+                  className="!bg-gray-200 !text-lg !font-medium"
+                >
+                  <h4>Infrastructure / Platform Team</h4>
+                </AccordionSummary>
+                <AccordionDetails className="!border !border-gray-200">
+                  <ul className="space-y-2 list-disc list-inside ml-4">
+                    <li>
+                      Backend Engineers
+                    </li>
+                    <li>
+                      Infrastructure Engineers
+                    </li>
+                    <li>
+                      Platform Engineers
+                    </li>
+                    <li>
+                      MLOps/DevOps Engineers
+                    </li>
+                    <li>
+                      Site Reliability Engineers
+                    </li>
+                    <li>
+                      Security Engineers
+                    </li>
+                    <li>
+                      System Engineers
+                    </li>
+                  </ul>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion
+                expanded={expanded === 'panel4'}
+                onChange={handleChange('panel4')}
+                className="!shadow-none"
+              >
+                <AccordionSummary
+                  expandIcon={<FaChevronDown className="" />}
+                  aria-controls="ac-content"
+                  id="ac-header"
+                  className="!bg-gray-200 !text-lg !font-medium"
+                >
+                  <h4>Application Team</h4>
+                </AccordionSummary>
+                <AccordionDetails className="!border !border-gray-200">
+                  <ul className="space-y-2 list-disc list-inside ml-4">
+                    <li>
+                      Frontend Engineers
+                    </li>
+                    <li>
+                      Fullstack Engineers
+                    </li>
+                    <li>
+                      UI/UX Designers
+                    </li>
+                    <li>
+                      Product Managers
+                    </li>
+                  </ul>
+                </AccordionDetails>
+              </Accordion>
             </div>
           </div>
         </div>
