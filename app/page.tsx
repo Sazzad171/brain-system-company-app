@@ -239,7 +239,18 @@ export default function Home() {
                   <FaArrowCircleRight className="text-primary" /> 
                   Converts unstructured data into structured, usable formats
                 </li>
-
+                <li className="flex gap-3 items-center">
+                  <FaArrowCircleRight className="text-primary" /> 
+                  Auto sorts files by content, type, or date
+                </li>
+                <li className="flex gap-3 items-center">
+                  <FaArrowCircleRight className="text-primary" /> 
+                  Searches inside documents, even scanned ones
+                </li>
+                <li className="flex gap-3 items-center">
+                  <FaArrowCircleRight className="text-primary" /> 
+                  Adds smart tags like dates, names, and authors
+                </li>
               </ul>
               <MotionDiv isButton className="mt-6">
                 <Link href="/contact" className="bg-primary text-white font-semibold py-3 px-6 rounded-3xl inline-block">
