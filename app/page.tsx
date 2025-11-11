@@ -9,6 +9,7 @@ import { FaArrowCircleRight, FaCheckCircle } from "react-icons/fa";
 import React from 'react'
 import CTA from "@/components/common/sections/cta";
 import Marquee from "react-fast-marquee";
+import MotionDiv from "@/components/custom-animation";
 
 const logos = [
   '/home/tech-stack/1.png',
@@ -26,37 +27,6 @@ export default function Home() {
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
 
-  const settings = {
-    infinite: true,
-    speed: 5000,
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    arrows: false,
-    dots: false,
-    cssEase: 'linear',
-    rtl: false,
-    pauseOnHover: false,
-    pauseOnFocus: false,
-    draggable: false,
-    }
-    const settings2 = {
-    infinite: true,
-    speed: 5000,
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    arrows: false,
-    dots: false,
-    cssEase: 'linear',
-    rtl: true,
-    pauseOnHover: false,
-    pauseOnFocus: false,
-    draggable: false,
-    }
-
   return (
     <>
       {/* hero */}
@@ -73,24 +43,28 @@ export default function Home() {
         {/* overlay */}
         <div className="absolute top-0 left-0 w-full h-full bg-black/50"></div>
 
-        <div className="relative flex justify-center items-center py-6 md:py-8 xl:py-20 xl:pt-36 min-h-screen z-10">
+        <MotionDiv type="bottomToTop" className="relative flex justify-center items-center py-6 md:py-8 xl:py-20 xl:pt-36 min-h-screen z-10">
           <div className="w-full md:w-8/12">
             <h2 className="font-bold text-6xl text-center text-white mb-8">Empowering Businesses <br /> through scalable AI solutions</h2>
             <p className="text-center text-white">Optimize  business operations by 40%,improve accuracy, reduce <br /> costs while maintaining robust security standards.</p>
             <div className="flex justify-center items-center gap-4 mt-12">
               <div>
-                <Link href="/" className="bg-primary text-white font-semibold py-3 px-6 rounded-3xl">
-                  Request for PoC
-                </Link>
+                <MotionDiv isButton>
+                  <Link href="/contact" className="bg-primary text-white font-semibold py-3 px-6 rounded-3xl">
+                    Request for PoC
+                  </Link>
+                </MotionDiv>
               </div>
               <div>
-                <Link href="/" className="bg-transparent border-2 border-primary text-white font-semibold py-3 px-6 rounded-3xl">
-                  Get Quote
-                </Link>
+                <MotionDiv isButton>
+                  <Link href="/contact" className="bg-transparent border-2 border-primary text-white font-semibold py-3 px-6 rounded-3xl">
+                    Get Quote
+                  </Link>
+                </MotionDiv>
               </div>
             </div>
           </div>
-        </div>
+        </MotionDiv>
       </section>
 
       {/* counter up */}
@@ -129,7 +103,7 @@ export default function Home() {
       <section className="py-12">
         <ContainerBodyLayout maxWidth="xl">
           <div className="flex gap-2">
-            <div className="w-full md:w-4/12">
+            <MotionDiv type="leftToRight" className="w-full md:w-4/12">
               <Image
                 src="/home/blens/1.png"
                 alt="Logo"
@@ -147,8 +121,8 @@ export default function Home() {
                 height={336}
                 className="object-cover"
               />
-            </div>
-            <div className="w-full md:w-4/12">
+            </MotionDiv>
+            <MotionDiv type="bottomToTop" className="w-full md:w-4/12">
               <h3 className="text-xl font-semibold mb-4">Blens ways</h3>
               <div className="mx-auto">
                 <Image
@@ -159,8 +133,8 @@ export default function Home() {
                   className="object-cover"
                 />
               </div>
-            </div>
-            <div className="w-full md:w-4/12">
+            </MotionDiv>
+            <MotionDiv type="rightToLeft" className="w-full md:w-4/12">
               <h3 className="text-xl font-medium">How Blens works</h3>
               <Image
                 src="/home/blens/4.jpg"
@@ -170,7 +144,7 @@ export default function Home() {
                 className="object-cover"
               />
               <p>Blens bridges the gap between scattered data and business clarity by unifying ERP, CRM, and file systems, processing all types of documents, and answering queries in plain English.</p>
-            </div>
+            </MotionDiv>
           </div>
         </ContainerBodyLayout>
       </section>
@@ -178,7 +152,7 @@ export default function Home() {
       {/* IR tool */}
       <section className="py-12">
         <ContainerBodyLayout maxWidth="xl">
-          <div className="flex gap-2">
+          <MotionDiv type="bottomToTop" className="flex gap-2">
             <div className="w-full md:w-4/12">
               <div className="flex gap-3 items-center mb-4">
                 <div className="max-w-[90px]">
@@ -229,7 +203,7 @@ export default function Home() {
                 className="object-cover"
               />
             </div>
-          </div>
+          </MotionDiv>
         </ContainerBodyLayout>
       </section>
 
@@ -237,7 +211,7 @@ export default function Home() {
       <section className="pt-14 pb-10">
         <ContainerBodyLayout>
           <div className="flex gap-4">
-            <div className="w-full md:w-6/12">
+            <MotionDiv type="leftToRight" className="w-full md:w-6/12">
               <Image
                 src="/home/brain-clerk/1.png"
                 alt="Logo"
@@ -245,8 +219,8 @@ export default function Home() {
                 height={533}
                 className="object-cover"
               />
-            </div>
-            <div className="w-full md:w-6/12">
+            </MotionDiv>
+            <MotionDiv type="rightToLeft" className="w-full md:w-6/12">
               <Image
                 src="/home/brain-clerk/2.png"
                 alt="Logo"
@@ -267,12 +241,12 @@ export default function Home() {
                 </li>
 
               </ul>
-              <div className="mt-6">
+              <MotionDiv isButton className="mt-6">
                 <Link href="/contact" className="bg-primary text-white font-semibold py-3 px-6 rounded-3xl inline-block">
                   Contact Us
                 </Link>
-              </div>
-            </div>
+              </MotionDiv>
+            </MotionDiv>
           </div>
         </ContainerBodyLayout>
       </section>
@@ -493,12 +467,12 @@ export default function Home() {
 
       {/* tech stack */}
       <section className="py-16 overflow-hidden">
-        <h2 className="text-[38px] text-center mb-7">Our Robust AI Tech Stack</h2>
+        <h2 className="text-[38px] text-center mb-6 lg:mb-10">Our Robust AI Tech Stack</h2>
         <div style={{ width: '100%' }}>
           <Marquee>
             {logos.map((slide, i) => (
               <div key={i} className="px-2 mb-4">
-                <div className="bg-gray-100 px-6 py-4 rounded-[40px]">
+                <div className="bg-gray-100 px-6 py-4 min-w-40 rounded-[40px]">
                   <Image
                     src={slide}
                     alt="Logo"
@@ -510,10 +484,10 @@ export default function Home() {
               </div>
             ))}
           </Marquee>
-          <Marquee>
+          <Marquee direction="right">
             {logos.map((slide, i) => (
               <div key={i} className="px-2 mb-4">
-                <div className="bg-gray-100 px-6 py-4 rounded-[40px]">
+                <div className="bg-gray-100 px-6 py-4 min-w-40 rounded-[40px]">
                   <Image
                     src={slide}
                     alt="Logo"

@@ -1,3 +1,4 @@
+import MotionDiv from "@/components/custom-animation";
 import ContainerBodyLayout from "@/components/layout/ContainerBodyLayout";
 import { Button, TextField } from "@mui/material";
 import Link from "next/link";
@@ -8,7 +9,7 @@ export default function Footer() {
   return <>
     <section className="py-6 lg:py-20">
       <ContainerBodyLayout maxWidth="xl">
-        <div className="rounded-2xl shadow-lg border border-gray-100 p-4">
+        <MotionDiv type="bottomToTop" className="rounded-2xl shadow-lg border border-gray-100 p-4">
           <div className="flex flex-col md:flex-row items-center gap-4">
             <div className="w-full md:w-4/12">
               <div className="bg-primary rounded-2xl overflow-hidden">
@@ -90,7 +91,7 @@ export default function Footer() {
               </form>
             </div>
           </div>
-        </div>
+        </MotionDiv>
       </ContainerBodyLayout>
     </section>
 

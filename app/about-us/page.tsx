@@ -2,6 +2,7 @@
 
 import CTA from "@/components/common/sections/cta";
 import BottomWaveShape from "@/components/common/shape/BottomWaveShape";
+import MotionDiv from "@/components/custom-animation";
 import ContainerBodyLayout from "@/components/layout/ContainerBodyLayout";
 import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import Image from "next/image";
@@ -22,7 +23,7 @@ export default function AboutUs() {
     <section className="pt-5 lg:pt-20">
       <ContainerBodyLayout>
         <div className="flex flex-col md:flex-row items-center gap-4">
-          <div className="w-full md:w-6/12">
+          <MotionDiv type="leftToRight" className="w-full md:w-6/12">
             <Image
               src="/about/1.png"
               alt="img"
@@ -30,14 +31,14 @@ export default function AboutUs() {
               height={700}
               className="object-cover"
             />
-          </div>
-          <div className="w-full md:w-6/12">
+          </MotionDiv>
+          <MotionDiv type="rightToLeft" className="w-full md:w-6/12">
             <h4 className="uppercase text-blue-500 font-medium tracking-widest mb-3">About US</h4>
             <h2 className="font-bold text-4xl mb-5">Pioneering Intelligent <br /> Solutions for a Connected <br /> World</h2>
             <p>
               Brain system limited is an advanced technology company committed to transforming various sectors in Bangladesh through innovative solutions in Artificial Intelligence (AI), IoT, Big Data, and Cybersecurity.
             </p>
-          </div>
+          </MotionDiv>
         </div>
       </ContainerBodyLayout>
       <BottomWaveShape />
@@ -46,19 +47,21 @@ export default function AboutUs() {
     {/* why choose us */}
     <section className="py-5 lg:py-12">
       <ContainerBodyLayout>
-        <div className="flex flex-col md:flex-row items-center gap-4 mb-5">
-          <div className="w-full md:w-8/12">
-            <h2 className="text-center md:text-left text-5xl font-medium">Why choose us</h2>
+        <MotionDiv type="bottomToTop">
+          <div className="flex flex-col md:flex-row items-center gap-4 mb-5">
+            <div className="w-full md:w-8/12">
+              <h2 className="text-center md:text-left text-5xl font-medium">Why choose us</h2>
+            </div>
+            <div className="w-full md:w-4/12 text-center md:text-right">
+              <Link href="/contact" className="bg-primary text-white text-2xl font-semibold py-3 px-8 rounded-3xl inline-block">
+                Contact Us
+              </Link>
+            </div>
           </div>
-          <div className="w-full md:w-4/12 text-center md:text-right">
-            <Link href="/contact" className="bg-primary text-white text-2xl font-semibold py-3 px-8 rounded-3xl inline-block">
-              Contact Us
-            </Link>
-          </div>
-        </div>
-        <p className="text-justify">
-          Making AI technologies accessible and beneficial to a broader population, including individuals, businesses and communities that may not have had access before. The idea is to reduce barriers such as high costs, technical expertise, and exclusive access to advanced tools, enabling more people to leverage AI for innovation and problem-solving. As a sister concern of Data Transformers Inc., a Texas-based AI engine development company, Brain System Ltd. leverages global expertise and innovative technologies to address real-world challenges and drive impactful change. At Brain Systems, we harness the power of AI and IoT to deliver cutting-edge solutions tailored to the unique needs of our clients. Our team of experts combines deep industry knowledge with advanced technological expertise to create intelligent systems that improve decision-making, streamline processes, and unlock new opportunities.
-        </p>
+          <p className="text-justify">
+            Making AI technologies accessible and beneficial to a broader population, including individuals, businesses and communities that may not have had access before. The idea is to reduce barriers such as high costs, technical expertise, and exclusive access to advanced tools, enabling more people to leverage AI for innovation and problem-solving. As a sister concern of Data Transformers Inc., a Texas-based AI engine development company, Brain System Ltd. leverages global expertise and innovative technologies to address real-world challenges and drive impactful change. At Brain Systems, we harness the power of AI and IoT to deliver cutting-edge solutions tailored to the unique needs of our clients. Our team of experts combines deep industry knowledge with advanced technological expertise to create intelligent systems that improve decision-making, streamline processes, and unlock new opportunities.
+          </p>
+        </MotionDiv>
       </ContainerBodyLayout>
     </section>
 
@@ -66,7 +69,7 @@ export default function AboutUs() {
     <section className="pb-5 lg:pb-12">
       <ContainerBodyLayout maxWidth="xl">
         <div className="flex flex-col md:flex-row items-center gap-4">
-          <div className="w-full md:w-4/12 mb-2">
+          <MotionDiv type="leftToRight" className="w-full md:w-4/12 mb-2">
             <div className="shadow-xl border border-gray-100 rounded-xl p-5 min-h-[440px]">
               <div className="inline-block bg-primary rounded-full p-4 w-18 h-18 mb-4">
                 <FaMap className="text-white text-4xl" />
@@ -78,8 +81,8 @@ export default function AboutUs() {
                  requirements. With deep expertise, you can rely on us to deliver cutting-edge IoT solutions.
               </p>
             </div>
-          </div>
-          <div className="w-full md:w-4/12 mb-2">
+          </MotionDiv>
+          <MotionDiv type="bottomToTop" className="w-full md:w-4/12 mb-2">
             <div className="shadow-xl border border-gray-100 rounded-xl p-5 min-h-[440px]">
               <div className="inline-block bg-primary rounded-full p-4 w-18 h-18 mb-4">
                 <FaDatabase className="text-white text-4xl" />
@@ -91,8 +94,8 @@ export default function AboutUs() {
                   and within budget, making us the trusted and reliable choice for your IoT analytics needs
               </p>
             </div>
-          </div>
-          <div className="w-full md:w-4/12 mb-2">
+          </MotionDiv>
+          <MotionDiv type="rightToLeft" className="w-full md:w-4/12 mb-2">
             <div className="shadow-xl border border-gray-100 rounded-xl p-5 min-h-[440px]">
               <div className="inline-block bg-primary rounded-full p-4 w-18 h-18 mb-4">
                 <FaTable className="text-white text-4xl" />
@@ -103,7 +106,7 @@ export default function AboutUs() {
                  Cloud and 2Smart Standalone that come equipped with built-in tools for integrating diverse IoT sensors, devices, and gateways.
               </p>
             </div>
-          </div>
+          </MotionDiv>
         </div>
       </ContainerBodyLayout>
     </section>
@@ -143,7 +146,7 @@ export default function AboutUs() {
     {/* mission vision */}
     <section className="pt-6 lg:pt-10 pb-28 max-w-[100vw] overflow-hidden">
       <ContainerBodyLayout>
-        <div className="flex flex-col md:flex-row items-center gap-4">
+        <MotionDiv type="leftToRight" className="flex flex-col md:flex-row items-center gap-4">
           <div className="w-full md:w-6/12">
             <div className="mb-6 md:mb-10">
               <h4 className="text-xl font-semibold mb-5">Mission</h4>
@@ -155,7 +158,7 @@ export default function AboutUs() {
               <p>Making AI tools and platforms available to non-experts through user-friendly interfaces.</p>
             </div>
           </div>
-        <div className="w-full md:w-6/12">
+        <MotionDiv type="rightToLeft" className="w-full md:w-6/12">
           <div className="relative">
             <Image
               src="/about/2.webp"
@@ -174,8 +177,8 @@ export default function AboutUs() {
               />
             </div>
           </div>
-        </div>
-        </div>
+        </MotionDiv>
+        </MotionDiv>
       </ContainerBodyLayout>
     </section>
 
@@ -183,7 +186,7 @@ export default function AboutUs() {
     <section className="pt-6 lg:pt-16 pb-28 max-w-[100vw] overflow-hidden">
       <ContainerBodyLayout>
         <div className="flex flex-col md:flex-row items-center gap-4">
-          <div className="w-full md:w-6/12">
+          <MotionDiv type="leftToRight" className="w-full md:w-6/12">
             <div className="relative">
               <Image
                 src="/about/2.webp"
@@ -202,8 +205,8 @@ export default function AboutUs() {
                 />
               </div>
             </div>
-          </div>
-          <div className="w-full md:w-6/12 md:pl-6">
+          </MotionDiv>
+          <MotionDiv type="rightToLeft" className="w-full md:w-6/12 md:pl-6">
             <div className="mb-6 md:mb-10">
               <h2 className="text-5xl font-semibold mb-6">Our Team Structure</h2>
               <p>A dedicated team in brain systems exemplifies the power of collaboration. By working together, 
@@ -339,7 +342,7 @@ export default function AboutUs() {
                 </AccordionDetails>
               </Accordion>
             </div>
-          </div>
+          </MotionDiv>
         </div>
       </ContainerBodyLayout>
     </section>
