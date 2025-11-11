@@ -7,12 +7,8 @@ import { useState } from "react";
 import CountUp from "react-countup";
 import { FaArrowCircleRight, FaCheckCircle } from "react-icons/fa";
 import React from 'react'
-import dynamic from 'next/dynamic'
-
-const Slider: any = dynamic(() => import('react-slick'), { ssr: false })
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
 import CTA from "@/components/common/sections/cta";
+import Marquee from "react-fast-marquee";
 
 const logos = [
   '/home/tech-stack/1.png',
@@ -499,7 +495,7 @@ export default function Home() {
       <section className="py-16 overflow-hidden">
         <h2 className="text-[38px] text-center mb-7">Our Robust AI Tech Stack</h2>
         <div style={{ width: '100%' }}>
-          <Slider {...settings}>
+          <Marquee>
             {logos.map((slide, i) => (
               <div key={i} className="px-2 mb-4">
                 <div className="bg-gray-100 px-6 py-4 rounded-[40px]">
@@ -513,8 +509,8 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </Slider>
-          <Slider {...settings2}>
+          </Marquee>
+          <Marquee>
             {logos.map((slide, i) => (
               <div key={i} className="px-2 mb-4">
                 <div className="bg-gray-100 px-6 py-4 rounded-[40px]">
@@ -528,7 +524,7 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </Slider>
+          </Marquee>
         </div>
       </section>
 
