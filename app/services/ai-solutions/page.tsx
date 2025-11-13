@@ -1,7 +1,7 @@
 import CTA from "@/components/common/sections/cta";
 import ContainerBodyLayout from "@/components/layout/ContainerBodyLayout";
 import Image from "next/image";
-import { FaAngleDoubleRight, FaArrowCircleRight } from "react-icons/fa";
+import { FaAngleDoubleRight, FaArrowCircleRight, FaStarOfLife } from "react-icons/fa";
 
 export default function AiSolutionPage () {
   return <>
@@ -11,21 +11,22 @@ export default function AiSolutionPage () {
         <div className="flex flex-col md:flex-row items-center gap-4">
           <div className="w-full md:w-6/12">
             <Image
-              src="/home/brain-clerk/1.png"
+              src="/services/ai-solutions/1.png"
               alt="Logo"
-              width={504}
-              height={533}
-              className="object-cover"
+              width={400}
+              height={216}
+              className="object-cover mx-auto"
             />
           </div>
           <div className="w-full md:w-6/12">
-            <h1 className="text-[42px] font-medium my-5">
+            <h1 className="text-[42px] font-medium my-3">
               Light OCR
             </h1>
-            <h4>
+            <div className="w-[70px] border-b-4 border-primary mb-5"></div>
+            <h4 className="text-4xl mb-5">
               Automatic invoice data processing with AI
             </h4>
-            <p className="mb-6">
+            <p className="text-xl mb-6 text-gray-600">
               Light OCR is an AI powered tool that automatically 
               captures and extracts key invoice details, including 
               PO number, Invoice date, Line items, Invoice total, Description etc.
@@ -62,8 +63,8 @@ export default function AiSolutionPage () {
     </section>
 
   {/* ocr steps */}
-    <section className="py-6 lg:py-10">
-      <ContainerBodyLayout>
+    <section className="py-6 lg:py-8">
+      <ContainerBodyLayout maxWidth="xl">
         <div className="flex flex-col md:flex-row items-center gap-4">
           <div className="w-full md:w-3/12">
             <div>
@@ -77,7 +78,7 @@ export default function AiSolutionPage () {
                 />
               </div>
               <div className="bg-[#88C273]">
-                <h5 className="text-center text-lg font-semibold p-4">Scan Documents with the mobile App</h5>
+                <h5 className="text-center font-semibold py-4 px-3">Scan Documents with the mobile App</h5>
               </div>
             </div>
           </div>
@@ -93,7 +94,20 @@ export default function AiSolutionPage () {
             </div>
           </div>
           <div className="w-full md:w-3/12">
-          
+            <div>
+              <div className="border border-black">
+                <Image
+                  src={"/services/ai-solutions/3.png"}
+                  alt="img"
+                  width={554}
+                  height={359}
+                  className="object-cover"
+                />
+              </div>
+              <div className="bg-[#88C273]">
+                <h5 className="text-center font-semibold py-4 px-3">Preview and edit as needed</h5>
+              </div>
+            </div>
           </div>
           <div className="w-full md:w-1/12 hidden md:block">
             <div>
@@ -107,32 +121,45 @@ export default function AiSolutionPage () {
             </div>
           </div>
           <div className="w-full md:w-3/12">
-          
+            <div>
+              <div className="border border-black">
+                <Image
+                  src={"/services/ai-solutions/4.png"}
+                  alt="img"
+                  width={554}
+                  height={359}
+                  className="object-cover"
+                />
+              </div>
+              <div className="bg-[#88C273]">
+                <h5 className="text-center font-semibold py-4 px-3">Save data in your web or desktop account</h5>
+              </div>
+            </div>
           </div>
         </div>
       </ContainerBodyLayout>
     </section>
 
   {/* brain clerk */}
-    <section className="py-6 lg:py-10">
+    <section className="py-6 lg:py-12">
       <ContainerBodyLayout>
         <div className="flex flex-col md:flex-row items-center gap-4">
           <div className="w-full md:w-7/12">
             <Image
               src={"/services/ai-solutions/5.1.png"}
               alt="img"
-              width={173}
-              height={167}
+              width={70}
+              height={68}
               className="object-cover"
             />
-            <h2 className="text-3xl my-4">Your Smart AI Assistant for Document Management</h2>
-            <p className="text-xl">BrainClerk turns messy, unstructured data into clean, structured formats fast. Whether it’s PDFs
+            <h2 className="text-4xl my-5">Your Smart AI Assistant for Document Management</h2>
+            <p className="text-xl text-gray-500 mb-4">BrainClerk turns messy, unstructured data into clean, structured formats fast. Whether it’s PDFs
               , scanned files, images, or forms, BrainClerk extracts key information and organizes it into Excel or database-ready 
               formats with ease.</p>
             <div className="flex flex-wrap gap-x-3 mb-5">
               {["Smart", "Faster", "Secure", "Effortless"].map((item, index) => 
-                <div key={index} className="flex gap-1">
-                  <svg aria-hidden="true" className="e-font-icon-svg e-fas-star-of-life" viewBox="0 0 480 512" xmlns="http://www.w3.org/2000/svg"><path d="M471.99 334.43L336.06 256l135.93-78.43c7.66-4.42 10.28-14.2 5.86-21.86l-32.02-55.43c-4.42-7.65-14.21-10.28-21.87-5.86l-135.93 78.43V16c0-8.84-7.17-16-16.01-16h-64.04c-8.84 0-16.01 7.16-16.01 16v156.86L56.04 94.43c-7.66-4.42-17.45-1.79-21.87 5.86L2.15 155.71c-4.42 7.65-1.8 17.44 5.86 21.86L143.94 256 8.01 334.43c-7.66 4.42-10.28 14.21-5.86 21.86l32.02 55.43c4.42 7.65 14.21 10.27 21.87 5.86l135.93-78.43V496c0 8.84 7.17 16 16.01 16h64.04c8.84 0 16.01-7.16 16.01-16V339.14l135.93 78.43c7.66 4.42 17.45 1.8 21.87-5.86l32.02-55.43c4.42-7.65 1.8-17.43-5.86-21.85z"></path></svg>
+                <div key={index} className="flex items-center gap-1">
+                  <FaStarOfLife className="text-primary" />
                   <h6 className="font-semibold">{item}</h6>
                 </div>
               )}
@@ -168,8 +195,8 @@ export default function AiSolutionPage () {
             <Image
               src={"/services/ai-solutions/5.png"}
               alt="img"
-              width={504}
-              height={533}
+              width={450}
+              height={476}
               className="object-cover"
             />
           </div>
@@ -178,61 +205,75 @@ export default function AiSolutionPage () {
     </section>
 
     {/* blens */}
-    <section className="py-6 lg:py-10">
+    <section className="py-6 lg:py-12">
       <ContainerBodyLayout>
         <div className="flex flex-col md:flex-row items-center gap-4">
-          <div className="w-full md:w-4/12">
-            <div className="shadow-lg border border-gray-100 rounded-xl p-4">
+          <div className="w-full md:w-5/12">
+            <div className="shadow-lg border border-gray-100 rounded-2xl p-5">
               <Image
                 src={"/services/ai-solutions/6.png"}
                 alt="img"
-                width={271}
-                height={166}
+                width={150}
+                height={40}
                 className="object-cover"
               />
               <h3 className="text-3xl font-medium mt-5 mb-3">Your Business Assistant</h3>
-              <p className="text-gray-400 text-lg">Blens is the ultimate business management tool that seamlessly connects all your data sources,
+              <p className="text-gray-500 text-lg mb-5">Blens is the ultimate business management tool that seamlessly connects all your data sources,
                  delivers real-time, role-based insights through natural language, and empowers you to make smarter, 
                  faster decisions anytime, anywhere.</p>
               <ul className="mb-4">
                 <li className="flex gap-3 items-center">
-                  <FaArrowCircleRight className="text-primary" /> 
+                  <div className="w-5">
+                    <FaArrowCircleRight className="text-primary" /> 
+                  </div>
                   Runs on WhatsApp, app, or desktop
                 </li>
                 <li className="flex gap-3 items-center">
-                  <FaArrowCircleRight className="text-primary" /> 
+                  <div className="w-5">
+                    <FaArrowCircleRight className="text-primary" /> 
+                  </div>
                   No tech skills needed
                 </li>
                 <li className="flex gap-3 items-center">
-                  <FaArrowCircleRight className="text-primary" /> 
+                  <div className="w-5">
+                    <FaArrowCircleRight className="text-primary" /> 
+                  </div>
                   Role-based data sharing
                 </li>
                 <li className="flex gap-3 items-center">
-                  <FaArrowCircleRight className="text-primary" /> 
+                  <div className="w-5">
+                    <FaArrowCircleRight className="text-primary" /> 
+                  </div>
                   Connects all your data sources, ERP, databases, files (Word, Excel, PDF), and scanned documents, into one clear view.
                 </li>
                 <li className="flex gap-3 items-center">
-                  <FaArrowCircleRight className="text-primary" /> 
+                  <div className="w-5">
+                    <FaArrowCircleRight className="text-primary" /> 
+                  </div>
                   Instantly syncs data across systems to keep your business information live and up-to-date.
                 </li>
                 <li className="flex gap-3 items-center">
-                  <FaArrowCircleRight className="text-primary" /> 
+                  <div className="w-5">
+                    <FaArrowCircleRight className="text-primary" /> 
+                  </div>
                   Upload any file—Blens reads, understands, guides
                 </li>
                 <li className="flex gap-3 items-center">
-                  <FaArrowCircleRight className="text-primary" /> 
+                  <div className="w-5">
+                    <FaArrowCircleRight className="text-primary" /> 
+                  </div>
                   Access financial health and forecasts—decide with confidence
                 </li>
               </ul>
             </div>
           </div>
-          <div className="w-full md:w-8/12">
+          <div className="w-full md:w-7/12">
             <Image
               src={"/services/ai-solutions/6.1.png"}
               alt="img"
-              width={674}
-              height={692}
-              className="object-cover"
+              width={500}
+              height={513}
+              className="object-cover ml-auto"
             />
           </div>
         </div>
@@ -243,7 +284,7 @@ export default function AiSolutionPage () {
     <section className="py-6 lg:py-10">
       <ContainerBodyLayout>
         <div className="flex flex-col md:flex-row items-center gap-4">
-          <div className="w-full md:w-4/12">
+          <div className="w-full md:w-6/12">
             <Image
               src={"/services/ai-solutions/7.png"}
               alt="img"
@@ -252,7 +293,7 @@ export default function AiSolutionPage () {
               className="object-cover"
             />
           </div>
-          <div className="w-full md:w-8/12">
+          <div className="w-full md:w-6/12">
             <div>
               <Image
                 src={"/services/ai-solutions/8.png"}
