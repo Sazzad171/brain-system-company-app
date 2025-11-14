@@ -11,14 +11,52 @@ import CTA from "@/components/common/sections/cta";
 import Marquee from "react-fast-marquee";
 import MotionDiv from "@/components/custom-animation";
 
-const logos = [
-  '/home/tech-stack/1.png',
-  '/home/tech-stack/1.png',
-  '/home/tech-stack/1.png',
-  '/home/tech-stack/1.png',
-  '/home/tech-stack/1.png',
-  '/home/tech-stack/1.png',
-  '/home/tech-stack/1.png',
+const logos1 = [
+  '/home/tech-stack/0.svg',
+  '/home/tech-stack/1.svg',
+  '/home/tech-stack/2.svg',
+  '/home/tech-stack/3.svg',
+  '/home/tech-stack/4.svg',
+  '/home/tech-stack/5.svg',
+  '/home/tech-stack/6.svg',
+  '/home/tech-stack/7.svg',
+  '/home/tech-stack/8.svg',
+]
+
+const logos2 = [
+  '/home/tech-stack/9.svg',
+  '/home/tech-stack/10.svg',
+  '/home/tech-stack/11.svg',
+  '/home/tech-stack/12.svg',
+  '/home/tech-stack/13.svg',
+  '/home/tech-stack/14.svg',
+  '/home/tech-stack/15.svg',
+  '/home/tech-stack/16.svg',
+  '/home/tech-stack/17.svg',
+]
+
+const logos3 = [
+  '/home/tech-stack/18.svg',
+  '/home/tech-stack/19.svg',
+  '/home/tech-stack/20.svg',
+  '/home/tech-stack/21.svg',
+  '/home/tech-stack/22.svg',
+  '/home/tech-stack/23.svg',
+  '/home/tech-stack/24.svg',
+  '/home/tech-stack/25.svg',
+  '/home/tech-stack/26.svg',
+]
+
+const logos4 = [
+  '/home/tech-stack/27.svg',
+  '/home/tech-stack/28.svg',
+  '/home/tech-stack/29.svg',
+  '/home/tech-stack/30.svg',
+  '/home/tech-stack/31.svg',
+  '/home/tech-stack/32.svg',
+  '/home/tech-stack/33.svg',
+  '/home/tech-stack/34.svg',
+  '/home/tech-stack/35.svg',
 ]
 
 export default function Home() {
@@ -481,14 +519,14 @@ export default function Home() {
         <h2 className="text-[38px] text-center mb-6 lg:mb-10">Our Robust AI Tech Stack</h2>
         <div style={{ width: '100%' }}>
           <Marquee>
-            {logos.map((slide, i) => (
+            {logos1.map((slide, i) => (
               <div key={i} className="px-2 mb-4">
-                <div className="bg-gray-100 px-6 py-4 min-w-40 rounded-[40px]">
+                <div className="grid place-items-center bg-gray-100 px-6 py-4 min-w-40 min-h-[70px] rounded-[40px]">
                   <Image
                     src={slide}
                     alt="Logo"
-                    width={50}
-                    height={50}
+                    width={40}
+                    height={40}
                     className="object-cover mx-auto"
                   />
                 </div>
@@ -496,14 +534,44 @@ export default function Home() {
             ))}
           </Marquee>
           <Marquee direction="right">
-            {logos.map((slide, i) => (
+            {logos2.map((slide, i) => (
               <div key={i} className="px-2 mb-4">
-                <div className="bg-gray-100 px-6 py-4 min-w-40 rounded-[40px]">
+                <div className="grid place-items-center bg-gray-100 px-6 py-4 min-w-40 min-h-[70px] rounded-[40px]">
                   <Image
                     src={slide}
                     alt="Logo"
-                    width={50}
-                    height={50}
+                    width={40}
+                    height={40}
+                    className="object-cover mx-auto"
+                  />
+                </div>
+              </div>
+            ))}
+          </Marquee>
+          <Marquee>
+            {logos3.map((slide, i) => (
+              <div key={i} className="px-2 mb-4">
+                <div className="grid place-items-center bg-gray-100 px-6 py-4 min-w-40 min-h-[70px] rounded-[40px]">
+                  <Image
+                    src={slide}
+                    alt="Logo"
+                    width={40}
+                    height={40}
+                    className="object-cover mx-auto"
+                  />
+                </div>
+              </div>
+            ))}
+          </Marquee>
+          <Marquee direction="right">
+            {logos4.map((slide, i) => (
+              <div key={i} className="px-2 mb-4">
+                <div className="grid place-items-center bg-gray-100 px-6 py-4 min-w-40 min-h-[70px] rounded-[40px]">
+                  <Image
+                    src={slide}
+                    alt="Logo"
+                    width={40}
+                    height={40}
                     className="object-cover mx-auto"
                   />
                 </div>

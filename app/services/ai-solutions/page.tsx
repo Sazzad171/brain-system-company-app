@@ -64,8 +64,8 @@ export default function AiSolutionPage () {
 
   {/* ocr steps */}
     <section className="py-6 lg:py-8">
-      <ContainerBodyLayout maxWidth="xl">
-        <div className="flex flex-col md:flex-row items-center gap-4">
+      <ContainerBodyLayout>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="w-full md:w-3/12">
             <div>
               <div className="border border-black">
@@ -205,11 +205,11 @@ export default function AiSolutionPage () {
     </section>
 
     {/* blens */}
-    <section className="py-6 lg:py-12">
+    <section className="pt-6 lg:pt-12 border-b-[8px] border-primary">
       <ContainerBodyLayout>
         <div className="flex flex-col md:flex-row items-center gap-4">
           <div className="w-full md:w-5/12">
-            <div className="shadow-lg border border-gray-100 rounded-2xl p-5">
+            <div className="shadow-xl border border-gray-200 rounded-2xl p-5">
               <Image
                 src={"/services/ai-solutions/6.png"}
                 alt="img"
@@ -281,7 +281,7 @@ export default function AiSolutionPage () {
     </section>
 
     {/* moina */}
-    <section className="py-6 lg:py-10">
+    <section className="py-6 lg:pt-20 lg:pb-10">
       <ContainerBodyLayout>
         <div className="flex flex-col md:flex-row items-center gap-4">
           <div className="w-full md:w-6/12">
@@ -290,7 +290,7 @@ export default function AiSolutionPage () {
               alt="img"
               width={625}
               height={700}
-              className="object-cover"
+              className="object-cover rounded-xl"
             />
           </div>
           <div className="w-full md:w-6/12">
@@ -298,13 +298,14 @@ export default function AiSolutionPage () {
               <Image
                 src={"/services/ai-solutions/8.png"}
                 alt="img"
-                width={220}
-                height={128}
+                width={110}
+                height={64}
                 className="object-cover"
               />
-              <h3 className="text-3xl font-medium mt-5 mb-3">A smart Chatbot that Speaks Your Language</h3>
-              <p>Moina is an intelligent chatbot designed to understand, assist, and respond to user queries in real time.</p>
-              <p className="text-gray-400 text-lg">Blens is the ultimate business management tool that seamlessly connects all your data sources,
+              <div className="w-[70px] border-b-4 border-primary my-5"></div>
+              <h3 className="text-4xl mt-5 mb-4">A smart Chatbot that Speaks Your Language</h3>
+              <p className="text-gray-400 mb-3">Moina is an intelligent chatbot designed to understand, assist, and respond to user queries in real time.</p>
+              <p className="text-gray-400 text-lg mb-5">Blens is the ultimate business management tool that seamlessly connects all your data sources,
                  delivers real-time, role-based insights through natural language, and empowers you to make smarter, 
                  faster decisions anytime, anywhere.</p>
               <ul className="mb-4">
@@ -336,17 +337,17 @@ export default function AiSolutionPage () {
     </section>
 
     {/* moina play */}
-    <section className="py-6 lg:py-20">
+    <section className="py-6 lg:py-20 hidden">
       <ContainerBodyLayout>
-        <div className="mb-4">
+        <div className="text-center mb-4">
           <Image
             src={"/services/ai-solutions/8.png"}
             alt="img"
-            width={220}
-            height={128}
-            className="object-cover"
+            width={110}
+            height={64}
+            className="object-cover mx-auto"
           />
-          <h3 className="text-3xl font-medium mt-5 mb-3">Roles Moina Can Play</h3>
+          <h3 className="text-4xl mt-5 mb-3">Roles Moina Can Play</h3>
           <p>It serves a wide variety of industries and use cases, including:</p>
         </div>
         <div className="flex flex-col md:flex-row items-center gap-4">
@@ -362,17 +363,17 @@ export default function AiSolutionPage () {
     <section className="py-6 lg:py-10">
       <ContainerBodyLayout>
         <div className="flex flex-col md:flex-row items-center gap-4">
-          <div className="w-full md:w-7/12">
+          <div className="w-full md:w-6/12">
             <div>
               <Image
                 src={"/services/ai-solutions/9.png"}
                 alt="img"
-                width={242}
-                height={127}
+                width={150}
+                height={79}
                 className="object-cover"
               />
-              <h3 className="text-3xl font-medium mt-5 mb-3">An AI powered smart Construction Monitoring System</h3>
-              <p className="text-gray-400 text-lg">Proxy Eyes is an AI-powered smart construction monitoring system that uses 
+              <h3 className="text-4xl mt-5 mb-4">An AI powered smart Construction Monitoring System</h3>
+              <p className="text-gray-500 text-lg mb-5">Proxy Eyes is an AI-powered smart construction monitoring system that uses 
                 CCTV to help companies manage their construction projects more easily and safely.</p>
               <ul className="mb-4">
                 <li className="flex gap-3 items-center">
@@ -398,14 +399,14 @@ export default function AiSolutionPage () {
               </ul>
             </div>
           </div>
-          <div className="w-full md:w-5/12">
-            <div className="shadow-lg border border-gray-100 rounded-xl p-4">
+          <div className="w-full md:w-6/12">
+            <div className="shadow-xl border border-gray-200 rounded-xl p-4">
               <Image
                 src={"/services/ai-solutions/10.png"}
                 alt="img"
-                width={453}
-                height={399}
-                className="object-cover"
+                width={500}
+                height={440}
+                className="object-cover mx-auto"
               />
             </div>
           </div>
@@ -414,11 +415,11 @@ export default function AiSolutionPage () {
     </section>
 
     {/* proxy eyes steps */}
-    <section className="py-6 lg:py-20">
+    <section className="py-6 lg:py-16">
       <ContainerBodyLayout>
         <div className="flex flex-col md:flex-row items-center gap-4">
-          <div className="w-full md:w-5/12">
-            <div className="shadow-lg border border-gray-100 rounded-xl p-4">
+          <div className="w-full md:w-6/12">
+            <div className="shadow-xl border border-gray-200 rounded-2xl p-2">
               <Image
                 src={"/services/ai-solutions/11.png"}
                 alt="img"
@@ -428,13 +429,56 @@ export default function AiSolutionPage () {
               />
             </div>
           </div>
-          <div className="w-full md:w-7/12">
-            <div className="flex flex-col md:flex-row items-center gap-4">
+          <div className="w-full md:w-6/12">
+            <div className="flex flex-wrap flex-col md:flex-row items-center">
               <div className="w-full md:w-6/12 mb-4">
-
-                <h5 className="text-lg font-semibold">faster decision-making</h5>
+                <div className="text-center border border-primary rounded-2xl p-3 md:mr-2 min-h-[190px]">
+                  <Image
+                    src={"/services/ai-solutions/16.svg"}
+                    alt="img"
+                    width={72}
+                    height={72}
+                    className="object-cover mx-auto"
+                  />
+                  <h5 className="text-lg font-semibold mt-2">Faster decision-making</h5>
+                </div>
               </div>
-
+              <div className="w-full md:w-6/12 mb-4">
+                <div className="text-center border border-primary rounded-2xl p-3 md:ml-2 min-h-[190px]">
+                  <Image
+                    src={"/services/ai-solutions/17.svg"}
+                    alt="img"
+                    width={72}
+                    height={72}
+                    className="object-cover mx-auto"
+                  />
+                  <h5 className="text-lg font-semibold mt-2">Enhanced operational efficiency</h5>
+                </div>
+              </div>
+              <div className="w-full md:w-6/12 mb-4">
+                <div className="text-center border border-primary rounded-2xl p-3 md:mr-2 min-h-[190px]">
+                  <Image
+                    src={"/services/ai-solutions/18.svg"}
+                    alt="img"
+                    width={72}
+                    height={72}
+                    className="object-cover mx-auto"
+                  />
+                  <h5 className="text-lg font-semibold mt-2">Assured smooth project execution</h5>
+                </div>
+              </div>
+              <div className="w-full md:w-6/12 mb-4">
+                <div className="text-center border border-primary rounded-2xl p-3 md:ml-2 min-h-[190px]">
+                  <Image
+                    src={"/services/ai-solutions/19.svg"}
+                    alt="img"
+                    width={72}
+                    height={72}
+                    className="object-cover mx-auto"
+                  />
+                  <h5 className="text-lg font-semibold mt-2">Guaranteed security throughout the construction process.</h5>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -449,12 +493,12 @@ export default function AiSolutionPage () {
             <Image
               src={"/services/ai-solutions/12.png"}
               alt="img"
-              width={305}
-              height={210}
+              width={140}
+              height={96}
               className="object-cover"
             />
-            <h3 className="text-4xl my-3">An Intelligent Reporting Tool</h3>
-            <p className="text-lg text-gray-400">Pulse is an intelligent reporting tool designed to seamlessly integrate with any software solution,
+            <h3 className="text-4xl my-5">An Intelligent Reporting Tool</h3>
+            <p className="text-lg text-gray-600">Pulse is an intelligent reporting tool designed to seamlessly integrate with any software solution,
                transforming how you generate reports. Unlike traditional reporting tools, Pulse understands natural language commands—so you simply ask,
                 and it instantly creates reports.</p>
           </div>
@@ -470,23 +514,33 @@ export default function AiSolutionPage () {
           <div className="w-full md:w-4/12 mb-3">
             <ul className="mb-4">
               <li className="flex gap-3 items-center">
-                <FaArrowCircleRight className="text-primary" /> 
+                <div className="w-6">
+                  <FaArrowCircleRight className="text-primary" /> 
+                </div>
                 Doesn’t require programmers to write complex queries or build report logic
               </li>
               <li className="flex gap-3 items-center">
-                <FaArrowCircleRight className="text-primary" /> 
+                <div className="w-6">
+                  <FaArrowCircleRight className="text-primary" /> 
+                </div>
                 Creates reports from your instructions in plain English
               </li>
               <li className="flex gap-3 items-center">
-                <FaArrowCircleRight className="text-primary" /> 
+                <div className="w-6">
+                  <FaArrowCircleRight className="text-primary" /> 
+                </div>
                 Can be exported in any format you need
               </li>
               <li className="flex gap-3 items-center">
-                <FaArrowCircleRight className="text-primary" /> 
+                <div className="w-6">
+                  <FaArrowCircleRight className="text-primary" /> 
+                </div>
                 Speeds up the reporting process and minimizes human errors.
               </li>
               <li className="flex gap-3 items-center">
-                <FaArrowCircleRight className="text-primary" /> 
+                <div className="w-6">
+                  <FaArrowCircleRight className="text-primary" /> 
+                </div>
                 On-demand, accurate insights enhance strategic and operational decisions
               </li>
             </ul>
@@ -496,7 +550,7 @@ export default function AiSolutionPage () {
     </section>
 
     {/* agro rx */}
-    <section className="py-6 lg:py-20">
+    <section className="py-6 lg:py-12">
       <ContainerBodyLayout>
         <div className="flex flex-col md:flex-row items-center gap-4">
           <div className="w-full md:w-6/12">
@@ -513,39 +567,53 @@ export default function AiSolutionPage () {
               <Image
                 src={"/services/ai-solutions/15.png"}
                 alt="img"
-                width={210}
-                height={200}
+                width={100}
+                height={95}
                 className="object-cover"
               />
-              <h3 className="text-3xl font-medium my-4">An Intelligent Plant Doctor</h3>
-              <p className="text-gray-400 text-lg mb-4">Agro Rx is a comprehensive solution designed to support farmers in every aspect of farming.</p>
+              <h3 className="text-3xl my-4">An Intelligent Plant Doctor</h3>
+              <p className="text-gray-600 text-lg mb-4">Agro Rx is a comprehensive solution designed to support farmers in every aspect of farming.</p>
               <ul className="mb-4">
                 <li className="flex gap-3 items-center">
-                  <FaArrowCircleRight className="text-primary" /> 
+                  <div className="w-5">
+                    <FaArrowCircleRight className="text-primary" /> 
+                  </div>
                   Accepts input in both Bangla and English.
                 </li>
                 <li className="flex gap-3 items-center">
-                  <FaArrowCircleRight className="text-primary" /> 
+                  <div className="w-5">
+                    <FaArrowCircleRight className="text-primary" /> 
+                  </div>
                   Farmers can speak or type their queries.
                 </li>
                 <li className="flex gap-3 items-center">
-                  <FaArrowCircleRight className="text-primary" /> 
+                  <div className="w-5">
+                    <FaArrowCircleRight className="text-primary" /> 
+                  </div>
                   Provides instant help on crop diseases, pesticides, and farming techniques.
                 </li>
                 <li className="flex gap-3 items-center">
-                  <FaArrowCircleRight className="text-primary" /> 
+                  <div className="w-5">
+                    <FaArrowCircleRight className="text-primary" /> 
+                  </div>
                   Farmers can send photos of affected plants for accurate diagnosis
                 </li>
                 <li className="flex gap-3 items-center">
-                  <FaArrowCircleRight className="text-primary" /> 
+                  <div className="w-5">
+                    <FaArrowCircleRight className="text-primary" /> 
+                  </div>
                   Automatically generates personalized treatment suggestions
                 </li>
                 <li className="flex gap-3 items-center">
-                  <FaArrowCircleRight className="text-primary" /> 
+                  <div className="w-5">
+                    <FaArrowCircleRight className="text-primary" /> 
+                  </div>
                   Available through any mobile phone by dialing a short code (e.g., 123) — no internet required
                 </li>
                 <li className="flex gap-3 items-center">
-                  <FaArrowCircleRight className="text-primary" /> 
+                  <div className="w-5">
+                    <FaArrowCircleRight className="text-primary" /> 
+                  </div>
                   Availability: Get farming support anytime, anywhere.
                 </li>
               </ul>
