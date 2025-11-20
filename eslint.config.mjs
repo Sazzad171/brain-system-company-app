@@ -10,7 +10,10 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  // Next.js defaults (core-web-vitals + TS)
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+
+  // Global ignores
   {
     ignores: [
       "node_modules/**",
@@ -19,6 +22,28 @@ const eslintConfig = [
       "build/**",
       "next-env.d.ts",
     ],
+  },
+
+  {
+    rules: {
+      // Make TS unused variable errors visible (red underline in VS Code)
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          argsIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+        },
+      ],
+
+      // Disable base rule (conflicts with TS rule)
+      "no-unused-vars": "off",
+
+      // Optional but useful
+      "no-console": "warn",
+      "no-debugger": "error",
+      "prefer-const": "error",
+      "no-var": "error",
+    },
   },
 ];
 

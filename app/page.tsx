@@ -1,15 +1,14 @@
-'use client'
+'use client';
 
-import ContainerBodyLayout from "@/components/layout/ContainerBodyLayout";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import CountUp from "react-countup";
-import { FaArrowCircleRight, FaCheckCircle } from "react-icons/fa";
-import React from 'react'
-import CTA from "@/components/common/sections/cta";
-import Marquee from "react-fast-marquee";
-import MotionDiv from "@/components/custom-animation";
+import CTA from '@/components/common/sections/cta';
+import MotionDiv from '@/components/custom-animation';
+import ContainerBodyLayout from '@/components/layout/ContainerBodyLayout';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
+import CountUp from 'react-countup';
+import Marquee from 'react-fast-marquee';
+import { FaArrowCircleRight, FaCheckCircle } from 'react-icons/fa';
 
 const logos1 = [
   '/home/tech-stack/0.svg',
@@ -21,7 +20,7 @@ const logos1 = [
   '/home/tech-stack/6.svg',
   '/home/tech-stack/7.svg',
   '/home/tech-stack/8.svg',
-]
+];
 
 const logos2 = [
   '/home/tech-stack/9.svg',
@@ -33,7 +32,7 @@ const logos2 = [
   '/home/tech-stack/15.svg',
   '/home/tech-stack/16.svg',
   '/home/tech-stack/17.svg',
-]
+];
 
 const logos3 = [
   '/home/tech-stack/18.svg',
@@ -45,7 +44,7 @@ const logos3 = [
   '/home/tech-stack/24.svg',
   '/home/tech-stack/25.svg',
   '/home/tech-stack/26.svg',
-]
+];
 
 const logos4 = [
   '/home/tech-stack/27.svg',
@@ -57,7 +56,7 @@ const logos4 = [
   '/home/tech-stack/33.svg',
   '/home/tech-stack/34.svg',
   '/home/tech-stack/35.svg',
-]
+];
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -81,21 +80,35 @@ export default function Home() {
         {/* overlay */}
         <div className="absolute top-0 left-0 w-full h-full bg-black/50"></div>
 
-        <MotionDiv type="bottomToTop" className="relative flex justify-center items-center py-6 md:py-8 xl:py-20 xl:pt-36 min-h-screen z-10">
+        <MotionDiv
+          type="bottomToTop"
+          className="relative flex justify-center items-center py-6 md:py-8 xl:py-20 xl:pt-36 min-h-screen z-10"
+        >
           <div className="w-full md:w-8/12">
-            <h2 className="font-bold text-6xl text-center text-white mb-8">Empowering Businesses <br /> through scalable AI solutions</h2>
-            <p className="text-center text-white">Optimize  business operations by 40%,improve accuracy, reduce <br /> costs while maintaining robust security standards.</p>
+            <h2 className="font-bold text-6xl text-center text-white mb-8">
+              Empowering Businesses <br /> through scalable AI solutions
+            </h2>
+            <p className="text-center text-white">
+              Optimize business operations by 40%,improve accuracy, reduce{' '}
+              <br /> costs while maintaining robust security standards.
+            </p>
             <div className="flex justify-center items-center gap-4 mt-12">
               <div>
                 <MotionDiv isButton>
-                  <Link href="/contact" className="bg-primary text-white font-semibold py-3 px-6 rounded-3xl">
+                  <Link
+                    href="/contact"
+                    className="bg-primary text-white font-semibold py-3 px-6 rounded-3xl"
+                  >
                     Request for PoC
                   </Link>
                 </MotionDiv>
               </div>
               <div>
                 <MotionDiv isButton>
-                  <Link href="/contact" className="bg-transparent border-2 border-primary text-white font-semibold py-3 px-6 rounded-3xl">
+                  <Link
+                    href="/contact"
+                    className="bg-transparent border-2 border-primary text-white font-semibold py-3 px-6 rounded-3xl"
+                  >
                     Get Quote
                   </Link>
                 </MotionDiv>
@@ -149,8 +162,13 @@ export default function Home() {
                 height={34}
                 className="object-cover"
               />
-              <h3 className="text-3xl font-medium mt-5 mb-5">Your Business Assistant</h3>
-              <p className="mb-5">Key decision maker depends on the teams to get daily or regular update of the business operations and reports.</p>
+              <h3 className="text-3xl font-medium mt-5 mb-5">
+                Your Business Assistant
+              </h3>
+              <p className="mb-5">
+                Key decision maker depends on the teams to get daily or regular
+                update of the business operations and reports.
+              </p>
               <h3 className="text-xl font-semibold mb-4">Traditional ways​</h3>
               <Image
                 src="/home/blens/2.png"
@@ -181,7 +199,11 @@ export default function Home() {
                 height={450}
                 className="object-cover"
               />
-              <p>Blens bridges the gap between scattered data and business clarity by unifying ERP, CRM, and file systems, processing all types of documents, and answering queries in plain English.</p>
+              <p>
+                Blens bridges the gap between scattered data and business
+                clarity by unifying ERP, CRM, and file systems, processing all
+                types of documents, and answering queries in plain English.
+              </p>
             </MotionDiv>
           </div>
         </ContainerBodyLayout>
@@ -270,28 +292,34 @@ export default function Home() {
                 Your Smart AI Assistant for Document Management
               </h1>
               <p className="mb-6">
-                BrainClerk turns messy, unstructured data into clean, structured formats fast. Whether it’s PDFs, scanned files, images, or forms, BrainClerk extracts key information and organizes it into Excel or database-ready formats with ease.
+                BrainClerk turns messy, unstructured data into clean, structured
+                formats fast. Whether it’s PDFs, scanned files, images, or
+                forms, BrainClerk extracts key information and organizes it into
+                Excel or database-ready formats with ease.
               </p>
               <ul className="mb-4">
                 <li className="flex gap-3 items-center">
-                  <FaArrowCircleRight className="text-primary" /> 
+                  <FaArrowCircleRight className="text-primary" />
                   Converts unstructured data into structured, usable formats
                 </li>
                 <li className="flex gap-3 items-center">
-                  <FaArrowCircleRight className="text-primary" /> 
+                  <FaArrowCircleRight className="text-primary" />
                   Auto sorts files by content, type, or date
                 </li>
                 <li className="flex gap-3 items-center">
-                  <FaArrowCircleRight className="text-primary" /> 
+                  <FaArrowCircleRight className="text-primary" />
                   Searches inside documents, even scanned ones
                 </li>
                 <li className="flex gap-3 items-center">
-                  <FaArrowCircleRight className="text-primary" /> 
+                  <FaArrowCircleRight className="text-primary" />
                   Adds smart tags like dates, names, and authors
                 </li>
               </ul>
               <MotionDiv isButton className="mt-6">
-                <Link href="/contact" className="bg-primary text-white font-semibold py-3 px-6 rounded-3xl inline-block">
+                <Link
+                  href="/contact"
+                  className="bg-primary text-white font-semibold py-3 px-6 rounded-3xl inline-block"
+                >
                   Contact Us
                 </Link>
               </MotionDiv>
@@ -305,13 +333,18 @@ export default function Home() {
         <ContainerBodyLayout maxWidth="xl">
           <div className="flex gap-4">
             <div className="w-full md:w-7/12">
-              <div className="relative bg-[#104A33] bg-cover bg-center bg-no-repeat rounded-2xl py-14 px-6" style={{ backgroundImage: "url('/home/nlp/1.webp')" }}>
+              <div
+                className="relative bg-[#104A33] bg-cover bg-center bg-no-repeat rounded-2xl py-14 px-6"
+                style={{ backgroundImage: "url('/home/nlp/1.webp')" }}
+              >
                 <h2 className="text-4xl font-semibold text-white mb-6">
                   NPL Driven <br />
                   <span className="text-[#88C273]">AI Solutions</span>
                 </h2>
-                <p className="text-white">leverage natural language processing to help machines, <br />
-                  understand,interpret, and respond to human language</p>
+                <p className="text-white">
+                  leverage natural language processing to help machines, <br />
+                  understand,interpret, and respond to human language
+                </p>
               </div>
             </div>
             <div className="w-full md:w-5/12">
@@ -378,16 +411,23 @@ export default function Home() {
       {/* project sections */}
       <section className="py-10">
         <ContainerBodyLayout maxWidth="xl">
-          <h2 className="text-[38px] text-center font-medium mb-8"><span className="text-primary">Our AI Services</span> accelerating innovation & <br /> guaranteeing ROI</h2>
+          <h2 className="text-[38px] text-center font-medium mb-8">
+            <span className="text-primary">Our AI Services</span> accelerating
+            innovation & <br /> guaranteeing ROI
+          </h2>
           <div className="flex flex-col md:flex-row gap-4 relative">
             <div className="w-full md:w-6/12 md:sticky md:top-0 self-start">
               <div className="bg-primary min-h-screen flex items-center p-4 md:p-8 rounded-3xl">
                 <div>
                   <h2 className="text-6xl font-medium text-white mb-2">
-                  Revolutionize Engineering with AI-First Transformation Services
+                    Revolutionize Engineering with AI-First Transformation
+                    Services
                   </h2>
                   <p className="text-white">
-                    From design to deployment, harness artificial intelligence to automate, innovate, and scale with precision. Integrating advanced analytics, automation, and machine learning to drive smarter decisions and sustainable growth.
+                    From design to deployment, harness artificial intelligence
+                    to automate, innovate, and scale with precision. Integrating
+                    advanced analytics, automation, and machine learning to
+                    drive smarter decisions and sustainable growth.
                   </p>
                 </div>
               </div>
@@ -402,23 +442,28 @@ export default function Home() {
                   className="object-cover rounded-3xl mb-4"
                 />
                 <h2 className="text-3xl font-semibold mb-3">Agro Rx</h2>
-                <h6 className="text-xl mb-4">Agro Rx is a comprehensive solution designed to support farmers in every aspect of farming.</h6>
+                <h6 className="text-xl mb-4">
+                  Agro Rx is a comprehensive solution designed to support
+                  farmers in every aspect of farming.
+                </h6>
                 <ul className="mb-4 space-y-2">
                   <li className="flex gap-3 items-center">
-                    <FaCheckCircle className="text-primary" /> 
+                    <FaCheckCircle className="text-primary" />
                     Accepts input in both Bangla and English.
                   </li>
                   <li className="flex gap-3 items-center">
-                    <FaCheckCircle className="text-primary" /> 
+                    <FaCheckCircle className="text-primary" />
                     Farmers can speak or type their queries.
                   </li>
                   <li className="flex gap-3 items-center">
-                    <FaCheckCircle className="text-primary" /> 
-                    Provides instant help on crop diseases, pesticides, and farming techniques.
+                    <FaCheckCircle className="text-primary" />
+                    Provides instant help on crop diseases, pesticides, and
+                    farming techniques.
                   </li>
                   <li className="flex gap-3 items-center">
-                    <FaCheckCircle className="text-primary" /> 
-                    Farmers can send photos of affected plants for accurate diagnosis
+                    <FaCheckCircle className="text-primary" />
+                    Farmers can send photos of affected plants for accurate
+                    diagnosis
                   </li>
                 </ul>
               </div>
@@ -431,23 +476,28 @@ export default function Home() {
                   className="object-cover rounded-3xl mb-4"
                 />
                 <h2 className="text-3xl font-semibold mb-3">Agro Rx</h2>
-                <h6 className="text-xl mb-4">Agro Rx is a comprehensive solution designed to support farmers in every aspect of farming.</h6>
+                <h6 className="text-xl mb-4">
+                  Agro Rx is a comprehensive solution designed to support
+                  farmers in every aspect of farming.
+                </h6>
                 <ul className="mb-4 space-y-2">
                   <li className="flex gap-3 items-center">
-                    <FaCheckCircle className="text-primary" /> 
+                    <FaCheckCircle className="text-primary" />
                     Accepts input in both Bangla and English.
                   </li>
                   <li className="flex gap-3 items-center">
-                    <FaCheckCircle className="text-primary" /> 
+                    <FaCheckCircle className="text-primary" />
                     Farmers can speak or type their queries.
                   </li>
                   <li className="flex gap-3 items-center">
-                    <FaCheckCircle className="text-primary" /> 
-                    Provides instant help on crop diseases, pesticides, and farming techniques.
+                    <FaCheckCircle className="text-primary" />
+                    Provides instant help on crop diseases, pesticides, and
+                    farming techniques.
                   </li>
                   <li className="flex gap-3 items-center">
-                    <FaCheckCircle className="text-primary" /> 
-                    Farmers can send photos of affected plants for accurate diagnosis
+                    <FaCheckCircle className="text-primary" />
+                    Farmers can send photos of affected plants for accurate
+                    diagnosis
                   </li>
                 </ul>
               </div>
@@ -460,23 +510,28 @@ export default function Home() {
                   className="object-cover rounded-3xl mb-4"
                 />
                 <h2 className="text-3xl font-semibold mb-3">Agro Rx</h2>
-                <h6 className="text-xl mb-4">Agro Rx is a comprehensive solution designed to support farmers in every aspect of farming.</h6>
+                <h6 className="text-xl mb-4">
+                  Agro Rx is a comprehensive solution designed to support
+                  farmers in every aspect of farming.
+                </h6>
                 <ul className="mb-4 space-y-2">
                   <li className="flex gap-3 items-center">
-                    <FaCheckCircle className="text-primary" /> 
+                    <FaCheckCircle className="text-primary" />
                     Accepts input in both Bangla and English.
                   </li>
                   <li className="flex gap-3 items-center">
-                    <FaCheckCircle className="text-primary" /> 
+                    <FaCheckCircle className="text-primary" />
                     Farmers can speak or type their queries.
                   </li>
                   <li className="flex gap-3 items-center">
-                    <FaCheckCircle className="text-primary" /> 
-                    Provides instant help on crop diseases, pesticides, and farming techniques.
+                    <FaCheckCircle className="text-primary" />
+                    Provides instant help on crop diseases, pesticides, and
+                    farming techniques.
                   </li>
                   <li className="flex gap-3 items-center">
-                    <FaCheckCircle className="text-primary" /> 
-                    Farmers can send photos of affected plants for accurate diagnosis
+                    <FaCheckCircle className="text-primary" />
+                    Farmers can send photos of affected plants for accurate
+                    diagnosis
                   </li>
                 </ul>
               </div>
@@ -489,23 +544,28 @@ export default function Home() {
                   className="object-cover rounded-3xl mb-4"
                 />
                 <h2 className="text-3xl font-semibold mb-3">Agro Rx</h2>
-                <h6 className="text-xl mb-4">Agro Rx is a comprehensive solution designed to support farmers in every aspect of farming.</h6>
+                <h6 className="text-xl mb-4">
+                  Agro Rx is a comprehensive solution designed to support
+                  farmers in every aspect of farming.
+                </h6>
                 <ul className="mb-4 space-y-2">
                   <li className="flex gap-3 items-center">
-                    <FaCheckCircle className="text-primary" /> 
+                    <FaCheckCircle className="text-primary" />
                     Accepts input in both Bangla and English.
                   </li>
                   <li className="flex gap-3 items-center">
-                    <FaCheckCircle className="text-primary" /> 
+                    <FaCheckCircle className="text-primary" />
                     Farmers can speak or type their queries.
                   </li>
                   <li className="flex gap-3 items-center">
-                    <FaCheckCircle className="text-primary" /> 
-                    Provides instant help on crop diseases, pesticides, and farming techniques.
+                    <FaCheckCircle className="text-primary" />
+                    Provides instant help on crop diseases, pesticides, and
+                    farming techniques.
                   </li>
                   <li className="flex gap-3 items-center">
-                    <FaCheckCircle className="text-primary" /> 
-                    Farmers can send photos of affected plants for accurate diagnosis
+                    <FaCheckCircle className="text-primary" />
+                    Farmers can send photos of affected plants for accurate
+                    diagnosis
                   </li>
                 </ul>
               </div>
@@ -516,7 +576,9 @@ export default function Home() {
 
       {/* tech stack */}
       <section className="py-16 overflow-hidden">
-        <h2 className="text-[38px] text-center mb-6 lg:mb-10">Our Robust AI Tech Stack</h2>
+        <h2 className="text-[38px] text-center mb-6 lg:mb-10">
+          Our Robust AI Tech Stack
+        </h2>
         <div style={{ width: '100%' }}>
           <Marquee>
             {logos1.map((slide, i) => (
