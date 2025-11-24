@@ -3,7 +3,7 @@ import MotionDiv from '@/components/custom-animation';
 import ContainerBodyLayout from '@/components/layout/ContainerBodyLayout';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaMap } from 'react-icons/fa';
+import { FaDirections, FaMap } from 'react-icons/fa';
 
 const WebApps = () => {
   const ourClients = [
@@ -18,6 +18,66 @@ const WebApps = () => {
     '/services/web-apps/clients-2.jpg',
     '/services/web-apps/clients-3.jpg',
   ];
+
+  const features = [
+    {
+      icon: <FaDirections className="text-black text-4xl" />,
+      heading: 'Responsive Design',
+      details:
+        'Ensures the website functions seamlessly across all devices, enhancing accessibility and user experience.',
+      motion: 'leftToRight',
+    },
+    {
+      icon: <FaDirections className="text-black text-4xl" />,
+      heading: 'SEO Optimization',
+      details:
+        'Improves visibility on search engines, driving organic traffic and increasing online presence.',
+      motion: 'leftToRight',
+    },
+    {
+      icon: <FaDirections className="text-black text-4xl" />,
+      heading: 'Fast Loading Speed',
+      details:
+        'Enhances user experience and reduces bounce rates, contributing to higher search engine rankings.',
+      motion: 'leftToRight',
+    },
+    {
+      icon: <FaDirections className="text-black text-4xl" />,
+      heading: 'Security Features',
+      details:
+        'Protects against cyber threats, ensuring data integrity and user trust.',
+      motion: 'leftToRight',
+    },
+    {
+      icon: <FaDirections className="text-black text-4xl" />,
+      heading: 'Scalability',
+      details:
+        'Allows the website to adapt and grow alongside business needs, accommodating increased traffic and functionality.',
+      motion: 'leftToRight',
+    },
+    {
+      icon: <FaDirections className="text-black text-4xl" />,
+      heading: 'User-Friendly Navigation',
+      details:
+        'Facilitates easy exploration and interaction, enhancing user satisfaction and engagement.',
+      motion: 'leftToRight',
+    },
+    {
+      icon: <FaDirections className="text-black text-4xl" />,
+      heading: 'Engaging Content',
+      details:
+        'Captivates and retains audience attention, encouraging repeat visits and sharing.',
+      motion: 'leftToRight',
+    },
+    {
+      icon: <FaDirections className="text-black text-4xl" />,
+      heading: 'Analytics and Tracking',
+      details:
+        'Provides insights into website performance, enabling informed decision-making and optimization efforts.',
+      motion: 'leftToRight',
+    },
+  ];
+
   return (
     <>
       {/* banner */}
@@ -209,6 +269,40 @@ const WebApps = () => {
       </section>
 
       {/* our web dev */}
+      <section className="py-6 lg:py-14">
+        <ContainerBodyLayout>
+          <div className="mb-4 md:mb-8">
+            <h2 className="text-[40px] font-semibold mb-2">
+              Our web development company in Bangladesh{' '}
+              <span className="text-primary">
+                encompasses the following features
+              </span>
+            </h2>
+            <span className="inline-block w-48 h-1 bg-gray-800"></span>
+          </div>
+          <div className="flex flex-col md:flex-row items-center flex-wrap">
+            {features?.map((featureItem, index) => (
+              <MotionDiv
+                type={featureItem?.motion ?? 'none'}
+                className="w-full md:w-6/12 lg:w-3/12 mb-4"
+                key={index}
+              >
+                <div className="text-center shadow-md border border-gray-100 bg-white hover:bg-gray-50 transition-all rounded-md p-5 min-h-[350px] md:mx-2">
+                  <div className="inline-block p-4 w-18 h-18 mb-2">
+                    {featureItem?.icon}
+                  </div>
+                  <h3 className="text-xl font-bold mb-4">
+                    {featureItem?.heading}
+                  </h3>
+                  <p className="text-gray-500 text-lg">
+                    {featureItem?.details}
+                  </p>
+                </div>
+              </MotionDiv>
+            ))}
+          </div>
+        </ContainerBodyLayout>
+      </section>
 
       {/* visitors banner */}
 
