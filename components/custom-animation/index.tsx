@@ -1,9 +1,13 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { motion } from 'framer-motion';
+import { ReactNode } from 'react';
 
-type AnimationType = "bottomToTop" | "leftToRight" | "rightToLeft" | "none";
+export type AnimationType =
+  | 'bottomToTop'
+  | 'leftToRight'
+  | 'rightToLeft'
+  | 'none';
 
 interface MotionDivProps {
   type?: AnimationType;
@@ -16,22 +20,25 @@ interface MotionDivProps {
 
 const animationVariants = {
   bottomToTop: { hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0 } },
-  leftToRight: { hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0 } },
+  leftToRight: {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0 },
+  },
   rightToLeft: { hidden: { opacity: 0, x: 50 }, visible: { opacity: 1, x: 0 } },
   none: { hidden: { opacity: 1 }, visible: { opacity: 1 } },
 };
 
 export default function MotionDiv({
-  type = "none",
+  type = 'none',
   isButton = false,
   children,
-  className = "",
+  className = '',
   delay = 0,
   duration = 0.6,
 }: MotionDivProps) {
   return (
     <motion.div
-      className={`${className} ${isButton && "inline-block"}`}
+      className={`${className} ${isButton && 'inline-block'}`}
       variants={animationVariants[type]}
       initial="hidden"
       whileInView="visible"

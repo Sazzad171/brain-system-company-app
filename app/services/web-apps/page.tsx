@@ -1,9 +1,16 @@
 import CTA from '@/components/common/sections/cta';
-import MotionDiv from '@/components/custom-animation';
+import MotionDiv, { AnimationType } from '@/components/custom-animation';
 import ContainerBodyLayout from '@/components/layout/ContainerBodyLayout';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaDirections, FaMap } from 'react-icons/fa';
+
+interface FeatureItem {
+  icon: React.ReactNode;
+  heading: string;
+  details: string;
+  motion: AnimationType;
+}
 
 const WebApps = () => {
   const ourClients = [
@@ -19,7 +26,7 @@ const WebApps = () => {
     '/services/web-apps/clients-3.jpg',
   ];
 
-  const features = [
+  const features: FeatureItem[] = [
     {
       icon: <FaDirections className="text-black text-4xl" />,
       heading: 'Responsive Design',
@@ -283,7 +290,7 @@ const WebApps = () => {
           <div className="flex flex-col md:flex-row items-center flex-wrap">
             {features?.map((featureItem, index) => (
               <MotionDiv
-                type={featureItem?.motion ?? 'none'}
+                type={featureItem?.motion ?? undefined}
                 className="w-full md:w-6/12 lg:w-3/12 mb-4"
                 key={index}
               >
@@ -305,6 +312,29 @@ const WebApps = () => {
       </section>
 
       {/* visitors banner */}
+      <section className="py-6 lg:py-14 bg-primary">
+        <ContainerBodyLayout>
+          <div className="text-center p-4">
+            <h4 className="text-white text-2xl mb-4">
+              Visitors form opinions on websites in just 0.5 seconds. And 38%
+              will exit if unappealing.
+            </h4>
+            <h3 className="text-white text-[42px] font-semibold mb-2 md:mb-10">
+              Make your website captivating today!
+            </h3>
+            <div>
+              <MotionDiv isButton>
+                <Link
+                  href="/contact-us"
+                  className="bg-white text-primary font-semibold py-4 px-8"
+                >
+                  Get A Quote
+                </Link>
+              </MotionDiv>
+            </div>
+          </div>
+        </ContainerBodyLayout>
+      </section>
 
       {/* user friendly web */}
       <section className="py-6 lg:py-10">
@@ -550,6 +580,75 @@ const WebApps = () => {
       </section>
 
       {/* your expectation */}
+      <section className="py-6 lg:py-10">
+        <ContainerBodyLayout>
+          <h2 className="text-5xl font-medium text-center mb-4 md:mb-10">
+            Your Expectations from Us!
+          </h2>
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
+            <div className="w-full md:w-6/12">
+              <div className="flex items-center gap-4 mb-4 md:mb-6">
+                <div className="inline-block bg-[#E7F9EF] rounded-lg p-4 w-18 h-18">
+                  <FaMap className="text-primary text-3xl" />
+                </div>
+                <div>
+                  <h5 className="text-2xl font-semibold mb-1">
+                    Design from sketch to functional
+                  </h5>
+                  <p>
+                    Our approach starts from a sketch to development, which
+                    leads us to base a website on what users expect.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4 mb-4 md:mb-6">
+                <div className="inline-block bg-[#E7F9EF] rounded-lg p-4 w-18 h-18">
+                  <FaMap className="text-primary text-3xl" />
+                </div>
+                <div>
+                  <h5 className="text-2xl font-semibold mb-1">
+                    Search Engine optimized
+                  </h5>
+                  <p>
+                    We ensure all of the SEO functionality while designing your
+                    business website.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="w-full md:w-6/12">
+              <div className="flex items-center gap-4 mb-4 md:mb-6">
+                <div className="inline-block bg-[#E7F9EF] rounded-lg p-4 w-18 h-18">
+                  <FaMap className="text-primary text-3xl" />
+                </div>
+                <div>
+                  <h5 className="text-2xl font-semibold mb-1">
+                    Optimized loading speed
+                  </h5>
+                  <p>
+                    We ensure websites load fast and look great on all devices,
+                    as 53% of mobile visitors leave slow-loading pages.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4 mb-4 md:mb-6">
+                <div className="inline-block bg-[#E7F9EF] rounded-lg p-4 w-18 h-18">
+                  <FaMap className="text-primary text-3xl" />
+                </div>
+                <div>
+                  <h5 className="text-2xl font-semibold mb-1">
+                    Safest and secure website
+                  </h5>
+                  <p>
+                    We provide top-grade protection for client websites, given
+                    the average 94 daily attacks and 2,608 weekly bot visits.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ContainerBodyLayout>
+      </section>
 
       {/* portfolio */}
 
